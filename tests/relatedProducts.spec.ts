@@ -43,14 +43,14 @@ test.describe('Related Products Tests', () => {
     expect(result).toBe(true);
   });
 
-  // TC_N_07: Verify the behavior when related product data fails to load
-  test('TC_N_07: Verify error message for loading failure', async () => {
+  // TC_N_06: Verify the behavior when related product data fails to load
+  test('TC_N_06: Verify error message for loading failure', async () => {
     const result = await productPage.verifyErrorLoadingRelatedProducts();
     expect(result).toBe(true);
   });
 
-  // TC_N_08: Verify behavior when the "See All" button URL is broken or invalid
-  test('TC_N_08: Verify See All button with broken URL', async ({ page }) => {
+  // TC_N_07: Verify behavior when the "See All" button URL is broken or invalid
+  test('TC_N_07: Verify See All button with broken URL', async ({ page }) => {
     // Mocking an invalid URL response
     await page.route('**/related-products-api-endpoint', route => route.abort());
     await productPage.clickSeeAll();
@@ -58,8 +58,8 @@ test.describe('Related Products Tests', () => {
     expect(errorMessage).toBe('Page not found');
   });
 
-  // TC_N_09: Verify behavior when a related product has no image or price data
-  test('TC_N_09: Verify placeholder for missing image/price', async () => {
+  // TC_N_08: Verify behavior when a related product has no image or price data
+  test('TC_N_08: Verify placeholder for missing image/price', async () => {
     const result = await productPage.verifyMissingImageOrPrice();
     expect(result).toBe('Image unavailable'); // Or 'Price unavailable' depending on missing data
   });
