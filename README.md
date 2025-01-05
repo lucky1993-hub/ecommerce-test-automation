@@ -27,3 +27,26 @@ This project automates the testing of the "Related Products" feature for an e-co
 ## Reporting
 To view test reports:
 npx playwright test --reporter=html
+
+## Folder Structure
+
+/ecommerce-test-automation
+│
+├── /pages
+│     ├── BasePage.ts                # Common page methods for reuse
+│     └── ProductPage.ts             # Page-specific methods for the product page
+│   
+├── /locators
+│     └── ProductPageLocators.ts    # Locators for product page
+│   
+├── /testdata
+│     └── TestData.ts               # Test data such as prices, percentages
+│  
+│── /tests
+│       └── ProductPageTests.ts       # Test scripts that use the page methods
+│
+├── /node_modules                      # Dependencies installed by npm
+│
+├── package.json                       # Project dependencies and scripts
+├── playwright.config.ts               # Playwright configuration file
+└── tsconfig.json                      # TypeScript configuration file
