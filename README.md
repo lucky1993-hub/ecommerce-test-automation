@@ -9,14 +9,13 @@ This project automates the testing of the "Related Products" feature for an e-co
 
 ## Setup
 1. Clone the repository:
-  git clone <repository-url>
+   git clone <repository-url>
   
 2. Install dependencies:
-
-  npm install
+   npm install
   
-3. Run tests:
-  npx playwright test
+4. Run tests:
+   npx playwright test
   
 ## Framework Details
 
