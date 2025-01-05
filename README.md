@@ -30,6 +30,8 @@ npx playwright test --reporter=html
 
 ## Folder Structure
 
+## Folder Structure
+
 /ecommerce-test-automation
 │
 ├── /pages
